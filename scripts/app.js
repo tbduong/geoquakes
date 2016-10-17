@@ -18,15 +18,32 @@ $(document).on("ready", function() {
     // console.log(data);
     var earthquakes = data.features;
     console.log(data.features);
-    //need to call function that creates marker for earthquake location
-    //need to include handlebars template for quakes
   })
   //fail function
   .fail(function(response){
       console.log("Error:", response);
   });
+});
 
-//this function will create the map
+  //function to create markers of coordinates
+  function createMarkers(locationArr, customIcon){
+    locationArr.forEach(function(location){
+      //dig down into location (object) and get the data you need, in this case the Long and Lat
+      var tempLat = location.geometry.coordinates[1];
+      var tempLng = location.geometry.coordinates[0];
+      var tempContentString = "<p>" + location.properties.title + "</p>";
+      var tempInfoWindow = new google.maps.InfoWindow({
+        content: tempContentString
+      });
+    });
+  }
+
+
+
+
+
+
+//function to create the map
 function initMap(){
   //define initial position on map
   var pos = {lat: 37.77, lng: -122.45};
@@ -35,12 +52,3 @@ function initMap(){
     zoom:2
   });
 }
-
-
-
-
-
-
-
-
-});
