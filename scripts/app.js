@@ -8,5 +8,21 @@ $(document).on("ready", function() {
   //Function to create the map
   initMap();
 
+  //AJAX call to get gmap JSON data
+  $quakesList = $.ajax({
+    method: "GET",
+    url: weekly_quakes_endpoint
+  })
+  //success function
+  .done(function(data){
+      console.log(data);
+  })
+  //fail function
+  .fail(function(response){
+      console.log("Error:", response);
+  });
+
+  });
+
 
 });
