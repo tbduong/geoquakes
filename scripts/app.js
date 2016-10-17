@@ -18,7 +18,7 @@ $(document).on("ready", function() {
     // console.log(data);
     var earthquakes = data.features;
     // console.log(earthquakes);
-    var quakeIcon = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Reddot-small.svg/400px-Reddot-small.svg.png";
+    var quakeIcon = "http://www.freshinvest.co.uk/wp-content/themes/hinge_client_theme/dist/images/sprite/small-dot.png";
     createMarkers(earthquakes, quakeIcon);
     compileHandlebarsTemplate(earthquakes, '#info', '#quakes-template');
   })
