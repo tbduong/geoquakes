@@ -5,6 +5,8 @@ var map;
 var template;
 
 $(document).on("ready", function() {
+  //Function to create the map
+  initMap();
 
 
 });
