@@ -15,3 +15,22 @@ body {
   border: 2px solid;
   padding: 1em;
 }
+
+h1 {
+  font-weight: bolder;
+  color: #CFDBC5;
+  background-color:#7F8778;
+  padding: 2em;
+  text-align: center;
+}
+
+h2 {
+  color: #CFDBC5;
+  background-color:#7F8778;
+  text-align: center;
+  padding: 1em;
+}
+
+p {
+  color: #CFDBC5;
+}
