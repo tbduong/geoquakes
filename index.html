@@ -21,6 +21,12 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="col-md-12">
+				<h1> QUAKEWATCH</h1>
+			</div>
+
+		</div>
+		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
 					<div id="map"></div>
@@ -29,7 +35,7 @@
 					<div id="info">
 						<h1>Earthquakes from the past week:</h1>
 						<!-- execute handlebars -->
-						<script type="quakes-template" type="text/x-handlebars-template">
+						<script id="quakes-template" type="text/x-handlebars-template">
 							{{#each quakes}}
 							<p> {{properties.title}} </p>
 							{{/each}}

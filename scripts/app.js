@@ -20,7 +20,14 @@ $(document).on("ready", function() {
     // console.log(earthquakes);
     var quakeIcon = "http://www.freshinvest.co.uk/wp-content/themes/hinge_client_theme/dist/images/sprite/small-dot.png";
     createMarkers(earthquakes, quakeIcon);
-    compileHandlebarsTemplate(earthquakes, '#info', '#quakes-template');
+
+    var source = $('#quakes-template').html();
+    template = Handlebars.compile(source);
+    
+    var quakesTemplate = template({quakes: earthquakes});
+
+    $("#info").append(quakesTemplate);
+
   })
   //fail function
   .fail(function(response){
