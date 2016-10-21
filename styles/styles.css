@@ -5,3 +5,13 @@
   height: 600px;
   margin-top: 20px;
 }
+
+body {
+  background-color: #5A6351;
+}
+
+#info {
+  background-color: #7F8778;
+  border: 2px solid;
+  padding: 1em;
+}
