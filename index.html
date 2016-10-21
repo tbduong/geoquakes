@@ -36,11 +36,11 @@
 					<div id="info">
 						<h2>Earthquakes from the past week:</h2>
 						<!-- execute handlebars -->
-
-						<b>M = magnitude</b>
 						<script id="quakes-template" type="text/x-handlebars-template">
 							{{#each quakes}}
-							<p> {{properties.title}} </p>
+							<p><b> Magnitude</b>: {{properties.mag}}</p>
+							<p><b> Where?:</b> {{properties.place}} </p>
+							<hr>
 							{{/each}}
 						</script>
 					</div>

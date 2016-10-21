@@ -23,7 +23,6 @@ $(document).on("ready", function() {
 
     var source = $('#quakes-template').html();
     template = Handlebars.compile(source);
-    
     var quakesTemplate = template({quakes: earthquakes});
 
     $("#info").append(quakesTemplate);
